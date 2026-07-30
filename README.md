@@ -73,7 +73,7 @@ cd /path/to/skill && npm install
 mkdir my-skill
 ```
 
-Create `my-skill/SKILL.md` with frontmatter and instructions:
+Create `my-skill/SKILL.md` with frontmatter and instructions. The `description` tells pi when to load the skill. The `## Usage` section tells the agent what steps to follow:
 
 ```markdown
 ---
@@ -85,13 +85,20 @@ description: Describe what your skill does and when pi should use it.
 
 ## Setup
 
+Install dependencies once before first use.
+
 ```bash
 npm install
 ```
 
 ## Usage
 
-Describe the steps the agent should follow.
+1. Run the setup script.
+2. Process the input file.
+3. Output results to stdout.
+
+```bash
+./scripts/process.sh <input>
 ```
 ```
 

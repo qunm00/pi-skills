@@ -28,6 +28,17 @@ This skill follows [Conventional Commits](https://www.conventionalcommits.org/):
 
 Types: `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`, `ci`, `build`, `revert`
 
+## Usage
+
+When the user asks to perform a Git operation:
+
+1. **Understand the request** — determine what the user wants: commit, branch, push, pull, undo, merge, rebase, stash, etc.
+2. **Check the current state** — run `git status` to see the working tree and index before taking action.
+3. **Confirm destructive operations** — for operations that discard history (`git reset --hard`, `git push --force`, `git branch -D`), explain the impact and confirm with the user before proceeding.
+4. **Execute the commands** — use the workflows below. Prefer `--force-with-lease` over `--force`. Prefer `git pull --rebase` over `git pull`.
+5. **Verify the result** — run `git log --oneline --graph --all --decorate -5` or `git status` to confirm success.
+6. **Use the helper script** — `./scripts/git-day.sh start|sync|publish|finish|squash|log` for common branch workflows.
+
 ## Common Workflows
 
 ### 1. Check Repository Status
