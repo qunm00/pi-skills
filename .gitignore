@@ -1,0 +1,6 @@
+# Local pi agent state
+.pi/
+
+# OS files
+.DS_Store
+Thumbs.db

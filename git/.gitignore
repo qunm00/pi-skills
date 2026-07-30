@@ -1,0 +1,2 @@
+# Ignore node_modules if any scripts use npm
+node_modules/
