@@ -78,27 +78,27 @@ Create `my-skill/SKILL.md` with frontmatter and instructions. The `description` 
 ```markdown
 ---
 name: my-skill
-description: Describe what your skill does and when pi should use it.
+description: Extract and summarize text from PDF files. Use when the user asks to process PDF documents.
 ---
 
 # My Skill
 
 ## Setup
 
-Install dependencies once before first use.
+Run once to make scripts executable:
 
 ```bash
-npm install
+chmod +x scripts/*.sh
 ```
 
 ## Usage
 
-1. Run the setup script.
-2. Process the input file.
-3. Output results to stdout.
+1. Run the extraction script with the input file.
+2. The script outputs plain text to stdout.
+3. Summarize the extracted text for the user.
 
 ```bash
-./scripts/process.sh <input>
+./scripts/extract.sh <input.pdf>
 ```
 ```
 
